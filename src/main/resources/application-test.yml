@@ -1,0 +1,5 @@
+server:
+  port: 7011
+  
+  
+runEvn: '测试环境'
