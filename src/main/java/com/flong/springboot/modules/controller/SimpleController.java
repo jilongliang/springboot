@@ -1,4 +1,4 @@
-package com.flong.springboot.controller;
+package com.flong.springboot.modules.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
