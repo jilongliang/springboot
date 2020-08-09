@@ -1,0 +1,5 @@
+//项目名称
+rootProject.name = 'springboot'
+// TODO 这里可以使用include命令导入其他项目比如：
+// include 'common'
+

@@ -11,7 +11,7 @@ spring:
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.1.231:3306/kotlin?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/kotlin?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -23,7 +23,7 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-    connectionInitSqls: set names utf8mb4
+    connectionInitSqls: set names utf8mb3
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
   mvc:
     view:

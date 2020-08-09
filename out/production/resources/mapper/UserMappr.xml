@@ -1,0 +1,27 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.flong.springboot.modules.mapper.UserMapper">
+	
+	<!-- 抽取公共字段 -->
+	<sql id="find_AS_R">
+	    <![CDATA[
+	    	SELECT A.user_Id as userId, A.USER_NAME as userName, 
+	    	A.PASS_WORD as passWord,is_deleted as isDeleted,
+	    	A.create_time as createTime
+	    ]]>
+	</sql>
+	
+	
+	<!--<select id="getUserList" resultType="com.flong.kotlin.modules.vo.resp.UserRespVo" >
+		<include refid="find_AS_R" /> FROM T_USER A 
+		<where>
+			<if test="userId != null">	and A.user_Id = #{userId}</if>
+			<if test="userName != null and  userName !='' ">and A.USER_NAME = #{userName}</if>
+		</where>
+		
+	</select>-->
+   
+   
+</mapper>
