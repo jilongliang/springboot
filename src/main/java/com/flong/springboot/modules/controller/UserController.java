@@ -69,8 +69,8 @@ public class UserController {
 
     /**
      * 用户分页，参数有多个使用下标索引进行处理.如果有两个参数(如用户名和地址)：conditionList[0].fieldName=userName、 conditionList[0].fieldName=address
-     * 未转码请求分页地址: http://localhost:7011/rest/page?conditionList[0].fieldName=userName&conditionList[0].operation=LIKE&conditionList[0].value=周
-     * 已转码请求分页地址: http://localhost:7011/rest/page?conditionList[0].fieldName=userName&conditionList[0].operation=LIKE&conditionList[0].value=%E5%91%A8
+     * 未转码请求分页地址: http://localhost:7011/user/page?conditionList[0].fieldName=userName&conditionList[0].operation=LIKE&conditionList[0].value=周
+     * 已转码请求分页地址: http://localhost:7011/user/page?conditionList[0].fieldName=userName&conditionList[0].operation=LIKE&conditionList[0].value=%E5%91%A8
      * @param page
      * @param conditions 条件
      * @return
