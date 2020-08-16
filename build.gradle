@@ -17,6 +17,8 @@ def lang_version = "3.4"
 def io_version = "2.6"
 def guava_version = "18.0"
 def hutool_version = "5.3.10"
+def swagger2_version = "2.9.2"
+def swagger_bsi_version = "1.9.2"
 
 group = 'com.flong'
 version = '0.0.1-SNAPSHOT'
@@ -32,7 +34,6 @@ repositories {
     }
     mavenLocal()
     mavenCentral()
-
 }
 
 /**
@@ -68,13 +69,16 @@ dependencies {
     compile "org.apache.commons:commons-lang3:${lang_version}"
     compile "commons-io:commons-io:${io_version}"
     compile "com.google.guava:guava:${guava_version}"
-    compile  "cn.hutool:hutool-all:${hutool_version}"
+    compile "cn.hutool:hutool-all:${hutool_version}"
+
+    compile "io.springfox:springfox-swagger2:${swagger2_version}"
+    compile "com.github.xiaoymin:swagger-bootstrap-ui:${swagger_bsi_version}"
 
 }
 
-
+//设置编码模式
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
-
+//设置编码模式
 [compileJava, javadoc, compileTestJava]*.options*.encoding = "UTF-8"

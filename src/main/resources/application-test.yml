@@ -23,7 +23,7 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-    connectionInitSqls: set names utf8mb3
+    connectionInitSqls: set names utf8mb4
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
   mvc:
     view:
