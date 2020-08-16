@@ -5,20 +5,18 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Date;
 
-@SuppressWarnings("all")
-@TableName("t_user")
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper=false)
+@TableName("t_user")
 public class User extends Model<User> implements Serializable {
 
     @TableId(type = IdType.ID_WORKER)
@@ -37,7 +35,7 @@ public class User extends Model<User> implements Serializable {
      * 逻辑删除(0-未删除,1-已删除)
      */
     @TableLogic
-    private String isDeleted;
+    private String delFlag;
 
     /**
      * 创建时间,允许为空,让数据库自动生成即可

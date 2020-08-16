@@ -6,13 +6,17 @@ plugins {
 /**
  * 使用Groovy语言语法定义版本号变量
  */
-def spring_boot_version = "2.0.5.RELEASE"
-def mybatis_plus_version = "3.2.0"
-def mysql_version = "5.1.47"
+def spring_boot_version = "2.1.5.RELEASE"
+def mybatis_plus_version = "3.1.2"
+def mysql_version = "8.0.21"
 def druid_version = "1.1.23"
 def logback_version = "1.2.1"
 def fastjson_version = "1.2.73"
 def lombok_version = "1.18.12"
+def lang_version = "3.4"
+def io_version = "2.6"
+def guava_version = "18.0"
+def hutool_version = "5.3.10"
 
 group = 'com.flong'
 version = '0.0.1-SNAPSHOT'
@@ -47,6 +51,7 @@ dependencies {
     }
     compile "org.springframework.boot:spring-boot-starter-undertow:${spring_boot_version}"
 
+    //runtime group: 'mysql', name: 'mysql-connector-java', version: '5.1.42'
     compile "org.springframework.boot:spring-boot-devtools:${spring_boot_version}"
     compile "org.springframework.boot:spring-boot-configuration-processor:${spring_boot_version}"
     compile "org.springframework.boot:spring-boot-starter-test:${spring_boot_version}"
@@ -60,6 +65,10 @@ dependencies {
     compileOnly "org.projectlombok:lombok:${lombok_version}"
     //testAnnotationProcessor "org.projectlombok:lombok:${lombok_version}"
     //testCompileOnly "org.projectlombok:lombok:${lombok_version}"
+    compile "org.apache.commons:commons-lang3:${lang_version}"
+    compile "commons-io:commons-io:${io_version}"
+    compile "com.google.guava:guava:${guava_version}"
+    compile  "cn.hutool:hutool-all:${hutool_version}"
 
 }
 

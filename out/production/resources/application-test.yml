@@ -1,7 +1,7 @@
 server:
   port: 7011
-  
-  
+
+
 runEvn: '测试环境'
 
 
@@ -10,8 +10,8 @@ spring:
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/kotlin?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.104:3306/kotlin?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -61,4 +61,4 @@ mybatis-plus:
 tenant:
   enable: false #默认关闭多租户功能，各服务根据需要开启
   ignores: #不过滤tenantId的表,这里主要添加不包含tenant_id字段及全局表，表名统一用大写，否则无法识别
-  - test
+    - test

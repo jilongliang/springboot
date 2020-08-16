@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SimpleController {
 
-	@Value("${runEvn}")
-	private String runEvn;
-	
-	@GetMapping("/test")
-	public String test() {
-		return "this spring boot " + runEvn +" date long " + System.currentTimeMillis();
-	}
+    @Value("${runEvn}")
+    private String runEvn;
+
+    @GetMapping("/test")
+    public String test() {
+        return "this spring boot " + runEvn + " date long " + System.currentTimeMillis();
+    }
 
 }
