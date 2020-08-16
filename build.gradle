@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'idea'
+    //id 'org.springframework.boot' version '2.1.5.RELEASE"'
+    //id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 }
 
 /**
@@ -17,6 +19,7 @@ def lang_version = "3.4"
 def io_version = "2.6"
 def guava_version = "18.0"
 def hutool_version = "5.3.10"
+def redis_version = "2.9.3"
 
 group = 'com.flong'
 version = '0.0.1-SNAPSHOT'
@@ -40,7 +43,8 @@ repositories {
  * 2、Gradle使用双引号可 ${变量}可以放入引号里面,单引号是不可以的。
  * 3、Gragle使用lombok需要引入annotationProcessor注解，否则不能使用lombok.
  * 4、mybatis-plus3.2.x以上版本引用了Kotlin的支持
- * 5、高版本Springboogt在spring-boot-dependencies-2.3.0.RELEASE.pom里面引入了mysql8.0.2的`<mysql.version>8.0.20</mysql.version>`配置
+ * 5、高版本Springboot在spring-boot-dependencies-2.3.0.RELEASE.pom里面引入了mysql8.0.2的`<mysql.version>8.0.20</mysql.version>`配置
+ * 在Gradle的gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-dependencies\目录可以找到
  */
 dependencies {
 
@@ -68,7 +72,10 @@ dependencies {
     compile "org.apache.commons:commons-lang3:${lang_version}"
     compile "commons-io:commons-io:${io_version}"
     compile "com.google.guava:guava:${guava_version}"
-    compile  "cn.hutool:hutool-all:${hutool_version}"
+    compile "cn.hutool:hutool-all:${hutool_version}"
+    compile "org.springframework.boot:spring-boot-starter-data-redis:${spring_boot_version}"
+    compile "org.springframework.boot:spring-boot-starter-data-redis-reactive:${spring_boot_version}"
+    compile "redis.clients:jedis:${redis_version}"
 
 }
 
